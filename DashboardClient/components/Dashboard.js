@@ -482,7 +482,35 @@ class Dashboard extends React.Component {
                 <h1 style={titular}>SENTIMENT ANALYSIS</h1>
                 <div id="sentimentChart" style={sentimentChart}>
                   {this.state.twitterSpinner ? <Loader color="#26A65B " size="16px" margin="4px"/> : <div></div>}
+                  
                 </div>
+                {this.state.currentChart == 'facebookChart' ?  
+
+                                  <div>
+                                    <ul className="legend horizontal-list">
+                                        <li>
+                                            <p className="funny split scnd-font-color">Funny</p>
+                                            <p className="percentage">21<sup>%</sup></p>
+                                        </li>
+                                        <li>
+                                            <p className="sad split scnd-font-color">Sad</p>
+                                            <p className="percentage">48<sup>%</sup></p>
+                                        </li>
+                                        <li>
+                                            <p className="angry split scnd-font-color">Angry</p>
+                                            <p className="percentage">9<sup>%</sup></p>
+                                        </li>
+                                        <li>
+                                            <p className="shocked split scnd-font-color">Shocked</p>
+                                            <p className="percentage">32<sup>%</sup></p>
+                                        </li>
+                                        <li>
+                                            <p className="love split scnd-font-color">Love</p>
+                                            <p className="percentage">32<sup>%</sup></p>
+                                        </li>
+                                    </ul>
+                                  </div> 
+                                  : ''} 
               </div>
             </Col>
           </Row>

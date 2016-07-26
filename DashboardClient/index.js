@@ -21657,7 +21657,110 @@
 	                'div',
 	                { id: 'sentimentChart', style: sentimentChart },
 	                this.state.twitterSpinner ? _react2.default.createElement(_PulseLoader2.default, { color: '#26A65B ', size: '16px', margin: '4px' }) : _react2.default.createElement('div', null)
-	              )
+	              ),
+	              this.state.currentChart == 'facebookChart' ? _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                  'ul',
+	                  { className: 'legend horizontal-list' },
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'funny split scnd-font-color' },
+	                      'Funny'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'percentage' },
+	                      '21',
+	                      _react2.default.createElement(
+	                        'sup',
+	                        null,
+	                        '%'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'sad split scnd-font-color' },
+	                      'Sad'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'percentage' },
+	                      '48',
+	                      _react2.default.createElement(
+	                        'sup',
+	                        null,
+	                        '%'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'angry split scnd-font-color' },
+	                      'Angry'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'percentage' },
+	                      '9',
+	                      _react2.default.createElement(
+	                        'sup',
+	                        null,
+	                        '%'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'shocked split scnd-font-color' },
+	                      'Shocked'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'percentage' },
+	                      '32',
+	                      _react2.default.createElement(
+	                        'sup',
+	                        null,
+	                        '%'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'love split scnd-font-color' },
+	                      'Love'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'percentage' },
+	                      '32',
+	                      _react2.default.createElement(
+	                        'sup',
+	                        null,
+	                        '%'
+	                      )
+	                    )
+	                  )
+	                )
+	              ) : ''
 	            )
 	          )
 	        ),
