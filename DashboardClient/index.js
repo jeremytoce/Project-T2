@@ -21158,6 +21158,8 @@
 	  'background-color': 'black'
 	};
 
+	var emotionalDataset = [];
+
 	var Dashboard = function (_React$Component) {
 	  _inherits(Dashboard, _React$Component);
 
@@ -21183,7 +21185,8 @@
 	      facebookSummary: '',
 	      facebookTopHeadlines: '',
 	      facebookLikes: '',
-	      currentChart: 'twitterChart'
+	      currentChart: 'twitterChart',
+	      emotionalDataset: []
 
 	    };
 	    return _this;
@@ -21380,6 +21383,9 @@
 	      });
 	      var emoDataset = [null].concat(dataFromServer);
 	      // console.log('emoDataset', emoDataset);  
+
+	      emotionalDataset = dataset;
+	      console.log(emotionalDataset);
 
 	      var fTest = function fTest() {
 	        emoDataset.splice(0, 1);
@@ -21669,51 +21675,13 @@
 	                    null,
 	                    _react2.default.createElement(
 	                      'p',
-	                      { className: 'funny split scnd-font-color' },
-	                      'Funny'
+	                      { className: 'love split scnd-font-color' },
+	                      'Love'
 	                    ),
 	                    _react2.default.createElement(
 	                      'p',
 	                      { className: 'percentage' },
-	                      '21',
-	                      _react2.default.createElement(
-	                        'sup',
-	                        null,
-	                        '%'
-	                      )
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'li',
-	                    null,
-	                    _react2.default.createElement(
-	                      'p',
-	                      { className: 'sad split scnd-font-color' },
-	                      'Sad'
-	                    ),
-	                    _react2.default.createElement(
-	                      'p',
-	                      { className: 'percentage' },
-	                      '48',
-	                      _react2.default.createElement(
-	                        'sup',
-	                        null,
-	                        '%'
-	                      )
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'li',
-	                    null,
-	                    _react2.default.createElement(
-	                      'p',
-	                      { className: 'angry split scnd-font-color' },
-	                      'Angry'
-	                    ),
-	                    _react2.default.createElement(
-	                      'p',
-	                      { className: 'percentage' },
-	                      '9',
+	                      this.state.emotionalDataset[0],
 	                      _react2.default.createElement(
 	                        'sup',
 	                        null,
@@ -21732,7 +21700,7 @@
 	                    _react2.default.createElement(
 	                      'p',
 	                      { className: 'percentage' },
-	                      '32',
+	                      this.state.emotionalDataset[1],
 	                      _react2.default.createElement(
 	                        'sup',
 	                        null,
@@ -21745,13 +21713,51 @@
 	                    null,
 	                    _react2.default.createElement(
 	                      'p',
-	                      { className: 'love split scnd-font-color' },
-	                      'Love'
+	                      { className: 'funny split scnd-font-color' },
+	                      'Funny'
 	                    ),
 	                    _react2.default.createElement(
 	                      'p',
 	                      { className: 'percentage' },
-	                      '32',
+	                      this.state.emotionalDataset[2],
+	                      _react2.default.createElement(
+	                        'sup',
+	                        null,
+	                        '%'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'sad split scnd-font-color' },
+	                      'Sad'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'percentage' },
+	                      this.state.emotionalDataset[3],
+	                      _react2.default.createElement(
+	                        'sup',
+	                        null,
+	                        '%'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'angry split scnd-font-color' },
+	                      'Angry'
+	                    ),
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'percentage' },
+	                      this.state.emotionalDataset[4],
 	                      _react2.default.createElement(
 	                        'sup',
 	                        null,

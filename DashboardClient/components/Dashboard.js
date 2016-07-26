@@ -18,6 +18,8 @@ var styles = {
   'background-color': 'black'
 }
 
+var emotionalDataset = [];
+
 class Dashboard extends React.Component {
   constructor(props){
     super(props);
@@ -47,7 +49,8 @@ class Dashboard extends React.Component {
       facebookSummary: '',
       facebookTopHeadlines: '',
       facebookLikes: '',
-      currentChart: 'twitterChart'
+      currentChart: 'twitterChart',
+      emotionalDataset: []
 
     }
   }
@@ -253,6 +256,9 @@ class Dashboard extends React.Component {
     });
     var emoDataset = [null].concat(dataFromServer);
     // console.log('emoDataset', emoDataset);  
+    
+    emotionalDataset = dataset;
+    console.log(emotionalDataset)
 
     var fTest = function () {
       emoDataset.splice(0, 1);
@@ -489,24 +495,24 @@ class Dashboard extends React.Component {
                                   <div>
                                     <ul className="legend horizontal-list">
                                         <li>
-                                            <p className="funny split scnd-font-color">Funny</p>
-                                            <p className="percentage">21<sup>%</sup></p>
-                                        </li>
-                                        <li>
-                                            <p className="sad split scnd-font-color">Sad</p>
-                                            <p className="percentage">48<sup>%</sup></p>
-                                        </li>
-                                        <li>
-                                            <p className="angry split scnd-font-color">Angry</p>
-                                            <p className="percentage">9<sup>%</sup></p>
+                                            <p className="love split scnd-font-color">Love</p>
+                                            <p className="percentage">{this.state.emotionalDataset[0]}<sup>%</sup></p>
                                         </li>
                                         <li>
                                             <p className="shocked split scnd-font-color">Shocked</p>
-                                            <p className="percentage">32<sup>%</sup></p>
+                                            <p className="percentage">{this.state.emotionalDataset[1]}<sup>%</sup></p>
                                         </li>
                                         <li>
-                                            <p className="love split scnd-font-color">Love</p>
-                                            <p className="percentage">32<sup>%</sup></p>
+                                            <p className="funny split scnd-font-color">Funny</p>
+                                            <p className="percentage">{this.state.emotionalDataset[2]}<sup>%</sup></p>
+                                        </li>
+                                        <li>
+                                            <p className="sad split scnd-font-color">Sad</p>
+                                            <p className="percentage">{this.state.emotionalDataset[3]}<sup>%</sup></p>
+                                        </li>
+                                        <li>
+                                            <p className="angry split scnd-font-color">Angry</p>
+                                            <p className="percentage">{this.state.emotionalDataset[4]}<sup>%</sup></p>
                                         </li>
                                     </ul>
                                   </div> 
